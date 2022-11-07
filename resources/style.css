@@ -1,0 +1,233 @@
+@font-face {
+    font-family: alkalami;
+    src: url("../resources/fonts/alkalami-v1-latin-regular.woff2") format('woff2'),
+    url("../resources/fonts/alkalami-v1-latin-regular.woff") format('woff'),
+    url("../resources/fonts/alkalami-v1-latin-regular.ttf") format('truetype');
+}
+
+html {
+    font-family: alkalami;
+    font-size: 16px;
+
+}
+
+body {
+    background-image: url(./images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-left: 0;
+}
+
+
+/*-------------------------------HEADER------------------------------------------*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(to right, rgb(3, 3, 27), grey);
+    overflow: hidden;
+}
+.logo {
+    height: 10rem;
+    width: auto;
+}
+    
+
+nav {
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    margin-left: 0;
+}
+nav a {
+    margin-left: 5rem;
+    color: rgb(255, 255, 255, 0.7);
+    text-decoration: none;
+
+    
+}
+
+/*-------------------------------ABOUT------------------------------------------*/
+#about { 
+    display: block;
+    margin-top: 15rem;
+    text-align: center;
+    background-color: rgb(255, 255, 255, 0.7);
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 5rem;
+    
+}
+
+
+
+
+/*-------------------------------EVENTS------------------------------------------*/
+#events {
+    background-color: rgb(255, 255, 255, 0.7);
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 5rem;
+
+}
+
+#events li {
+    display: block;
+}
+
+
+
+/*-------------------------------GALLERY------------------------------------------*/
+#gallery h2 {
+    font-size: 2rem;
+    text-align: center;
+    background-color:rgb(3, 3, 27);
+    color:rgb(255, 255, 255, 0.7);
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 2rem;
+}
+
+.container {
+    display: grid;
+    margin: auto;
+    width: 75%;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+    grid-auto-flow: row;
+    gap: 1rem;
+    
+}
+
+.container img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 3rem;
+    
+}
+
+.one {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.two {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.three {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.four {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.five {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.six {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.seven {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.eight {
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.nine {
+    grid-area: 3 / 3 / 4 / 4;
+}
+
+
+
+
+
+/*-------------------------------CONTACT------------------------------------------*/
+#contact {
+    background-color: rgb(255, 255, 255, 0.7);
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 5rem;
+}
+
+
+
+
+/*-------------------------------FOOTER------------------------------------------*/
+footer {
+    background-color: rgb(255, 255, 255, 0.7);
+    text-align: center;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    border-radius: 5rem;
+}
+footer ul {
+    list-style: none;
+}
+
+@media only screen and (max-width: 480px) {
+    
+    body {
+        background-image: none;
+        font-size: 50%;
+    }
+    header {        
+        width: auto;
+        position: unset;        
+    }
+    header nav {
+        display: flex;
+        flex-wrap: wrap;
+        width: 75%;
+    }
+    #about {
+        margin: 5%;
+    }
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 1024px) {
+    
+        body {
+            font-size: 75%;
+        }
+        header {        
+            width: auto;
+            position: unset;        
+        }
+        header nav {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        #about {
+            margin: 5%;
+        }
+        #events {
+            margin-left: 12.5%;
+            margin-right: 12.5%;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 75%;
+        }
+        #contact {
+            margin-left: 12.5%;
+            margin-right: 12.5%;
+        }
+        footer {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+}
